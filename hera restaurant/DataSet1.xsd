@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="hera_restaurantConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="hera_restaurantConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.hera_restaurant.Properties.Settings.GlobalReference.Default.hera_restaurantConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hera_restaurantConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        hesap_odemeleri.ARA_TOPLAM, hesap_odemeleri.KDV_TUTARI, hesap_odemeleri.INDIRIM, hesap_odemeleri.TOPLAM_TUTAR, hesap_odemeleri.TARIH, urunler.URUNAD, satislar.URUNID
+FROM            hesap_odemeleri INNER JOIN
+                         satislar ON hesap_odemeleri.HESAPID = satislar.HESAPID INNER JOIN
+                         urunler ON satislar.URUNID = urunler.ID INNER JOIN
+                         hesap ON hesap_odemeleri.HESAPID = hesap.ID AND satislar.HESAPID = hesap.ID
+WHERE        (31 &gt;= DATEDIFF(dd, hesap_odemeleri.TARIH, GETDATE()))</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ARA_TOPLAM" DataSetColumn="ARA_TOPLAM" />
+              <Mapping SourceColumn="KDV_TUTARI" DataSetColumn="KDV_TUTARI" />
+              <Mapping SourceColumn="INDIRIM" DataSetColumn="INDIRIM" />
+              <Mapping SourceColumn="TOPLAM_TUTAR" DataSetColumn="TOPLAM_TUTAR" />
+              <Mapping SourceColumn="TARIH" DataSetColumn="TARIH" />
+              <Mapping SourceColumn="URUNAD" DataSetColumn="URUNAD" />
+              <Mapping SourceColumn="URUNID" DataSetColumn="URUNID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable2TableAdapter" GeneratorDataComponentClassName="DataTable2TableAdapter" Name="DataTable2" UserDataComponentName="DataTable2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hera_restaurantConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        hesap_odemeleri.ARA_TOPLAM, hesap_odemeleri.KDV_TUTARI, hesap_odemeleri.INDIRIM, hesap_odemeleri.TOPLAM_TUTAR, hesap_odemeleri.TARIH, urunler.URUNAD, satislar.URUNID
+FROM            hesap_odemeleri INNER JOIN
+                         satislar ON hesap_odemeleri.HESAPID = satislar.HESAPID INNER JOIN
+                         urunler ON satislar.URUNID = urunler.ID INNER JOIN
+                         hesap ON hesap_odemeleri.HESAPID = hesap.ID AND satislar.HESAPID = hesap.ID
+WHERE        (1 &gt;= DATEDIFF(dd, hesap_odemeleri.TARIH, GETDATE()))</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ARA_TOPLAM" DataSetColumn="ARA_TOPLAM" />
+              <Mapping SourceColumn="KDV_TUTARI" DataSetColumn="KDV_TUTARI" />
+              <Mapping SourceColumn="INDIRIM" DataSetColumn="INDIRIM" />
+              <Mapping SourceColumn="TOPLAM_TUTAR" DataSetColumn="TOPLAM_TUTAR" />
+              <Mapping SourceColumn="TARIH" DataSetColumn="TARIH" />
+              <Mapping SourceColumn="URUNAD" DataSetColumn="URUNAD" />
+              <Mapping SourceColumn="URUNID" DataSetColumn="URUNID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ARA_TOPLAM" msprop:Generator_UserColumnName="ARA_TOPLAM" msprop:Generator_ColumnPropNameInTable="ARA_TOPLAMColumn" msprop:Generator_ColumnPropNameInRow="ARA_TOPLAM" msprop:Generator_ColumnVarNameInTable="columnARA_TOPLAM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KDV_TUTARI" msprop:Generator_UserColumnName="KDV_TUTARI" msprop:Generator_ColumnPropNameInTable="KDV_TUTARIColumn" msprop:Generator_ColumnPropNameInRow="KDV_TUTARI" msprop:Generator_ColumnVarNameInTable="columnKDV_TUTARI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INDIRIM" msprop:Generator_UserColumnName="INDIRIM" msprop:Generator_ColumnPropNameInTable="INDIRIMColumn" msprop:Generator_ColumnPropNameInRow="INDIRIM" msprop:Generator_ColumnVarNameInTable="columnINDIRIM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOPLAM_TUTAR" msprop:Generator_UserColumnName="TOPLAM_TUTAR" msprop:Generator_ColumnPropNameInTable="TOPLAM_TUTARColumn" msprop:Generator_ColumnPropNameInRow="TOPLAM_TUTAR" msprop:Generator_ColumnVarNameInTable="columnTOPLAM_TUTAR" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TARIH" msprop:Generator_UserColumnName="TARIH" msprop:Generator_ColumnPropNameInTable="TARIHColumn" msprop:Generator_ColumnPropNameInRow="TARIH" msprop:Generator_ColumnVarNameInTable="columnTARIH" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="URUNAD" msprop:Generator_UserColumnName="URUNAD" msprop:Generator_ColumnPropNameInTable="URUNADColumn" msprop:Generator_ColumnPropNameInRow="URUNAD" msprop:Generator_ColumnVarNameInTable="columnURUNAD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="URUNID" msprop:Generator_UserColumnName="URUNID" msprop:Generator_ColumnPropNameInTable="URUNIDColumn" msprop:Generator_ColumnPropNameInRow="URUNID" msprop:Generator_ColumnVarNameInTable="columnURUNID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable2" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent" msprop:Generator_TablePropName="DataTable2" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_RowClassName="DataTable2Row" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_UserTableName="DataTable2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ARA_TOPLAM" msprop:Generator_ColumnPropNameInRow="ARA_TOPLAM" msprop:Generator_ColumnPropNameInTable="ARA_TOPLAMColumn" msprop:Generator_ColumnVarNameInTable="columnARA_TOPLAM" msprop:Generator_UserColumnName="ARA_TOPLAM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KDV_TUTARI" msprop:Generator_ColumnPropNameInRow="KDV_TUTARI" msprop:Generator_ColumnPropNameInTable="KDV_TUTARIColumn" msprop:Generator_ColumnVarNameInTable="columnKDV_TUTARI" msprop:Generator_UserColumnName="KDV_TUTARI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INDIRIM" msprop:Generator_ColumnPropNameInRow="INDIRIM" msprop:Generator_ColumnPropNameInTable="INDIRIMColumn" msprop:Generator_ColumnVarNameInTable="columnINDIRIM" msprop:Generator_UserColumnName="INDIRIM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOPLAM_TUTAR" msprop:Generator_ColumnPropNameInRow="TOPLAM_TUTAR" msprop:Generator_ColumnPropNameInTable="TOPLAM_TUTARColumn" msprop:Generator_ColumnVarNameInTable="columnTOPLAM_TUTAR" msprop:Generator_UserColumnName="TOPLAM_TUTAR" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TARIH" msprop:Generator_ColumnPropNameInRow="TARIH" msprop:Generator_ColumnPropNameInTable="TARIHColumn" msprop:Generator_ColumnVarNameInTable="columnTARIH" msprop:Generator_UserColumnName="TARIH" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="URUNAD" msprop:Generator_ColumnPropNameInRow="URUNAD" msprop:Generator_ColumnPropNameInTable="URUNADColumn" msprop:Generator_ColumnVarNameInTable="columnURUNAD" msprop:Generator_UserColumnName="URUNAD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="URUNID" msprop:Generator_ColumnPropNameInRow="URUNID" msprop:Generator_ColumnPropNameInTable="URUNIDColumn" msprop:Generator_ColumnVarNameInTable="columnURUNID" msprop:Generator_UserColumnName="URUNID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
