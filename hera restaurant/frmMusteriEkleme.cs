@@ -18,8 +18,7 @@ namespace hera_restaurant
         }
 
         private void btnGeri_Click(object sender, EventArgs e)
-        {
-            
+        {         
             frmMenu frm = new frmMenu(); //bunu frm musteri yapmak istiyroum
             this.Close();
             frm.Show();            
